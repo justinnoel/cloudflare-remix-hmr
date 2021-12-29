@@ -1,0 +1,13 @@
+diff --git a/node_modules/wrangler/wrangler-dist/cli.js b/node_modules/wrangler/wrangler-dist/cli.js
+index 803053a..9aba97e 100644
+--- a/node_modules/wrangler/wrangler-dist/cli.js
++++ b/node_modules/wrangler/wrangler-dist/cli.js
+@@ -124100,7 +124100,7 @@ var pages = (yargs) => {
+       const scriptPath = (0, import_path6.join)((0, import_os3.tmpdir)(), "./functionsWorker.js");
+       miniflareArgs = {
+         scriptPath,
+-        buildWatchPaths: [functionsDirectory],
++        buildWatchPaths: [functionsDirectory, "./app"],
+         buildCommand: `npx @cloudflare/pages-functions-compiler build ${functionsDirectory} --outfile ${scriptPath}`
+       };
+     } else {
